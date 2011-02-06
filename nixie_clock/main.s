@@ -133,7 +133,7 @@ cycle:
 	bcf	PORTA,clk
 	call	render
 	movwf	PORTB
-*-	return
+	return
 clear:
 	bsf	PORTA,clr
 	nop
