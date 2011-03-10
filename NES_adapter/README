@@ -1,0 +1,5 @@
+NES controller using the Teensy
+
+POST: http://letshackstuff.com/?s=blog&m=permalink&x=easy-hacky-nes-controller-adapter-with-teensy
+The NES controller buttons are mapped to keyboard keys.
+U,D,L,R,CTRL,SHIFT,A,B (not in that order!)
