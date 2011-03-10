@@ -1,5 +1,7 @@
 /*
-NES controller adpater using Teensy.
+Title: NES controller adpater using Teensy.
+Date: 10-03-2011
+Author: Ali Raheem
 */
 int pulsePin = PIN_D0;
 int latchPin = PIN_D1;
@@ -13,17 +15,9 @@ void setup(){
 void loop(){
   digitalWrite(latchPin, HIGH);
   digitalWrite(latchPin, LOW);
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key1(KEY_A);
-  }else{
-    Keyboard.set_key1(0);
-  }
+  Keyboard.set_key1((digitalRead(dataPin))?0:KEY_A);
   pulse();
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key2(KEY_B);
-  }else{
-    Keyboard.set_key2(0);
-  }
+  Keyboard.set_key2((digitalRead(dataPin))?0:KEY_B);
   pulse();
   modifiers = 0;
   if(!digitalRead(dataPin))
@@ -32,29 +26,13 @@ void loop(){
   if(!digitalRead(dataPin))
     modifiers |= MODIFIERKEY_SHIFT;
   pulse();
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key3(KEY_U);
-  }else{
-    Keyboard.set_key3(0);
-  }
+  Keyboard.set_key3((digitalRead(dataPin))?0:KEY_U);
   pulse();
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key4(KEY_D);
-  }else{
-    Keyboard.set_key4(0);
-  }
+  Keyboard.set_key4((digitalRead(dataPin))?0:KEY_D);
   pulse();
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key5(KEY_L);
-  }else{
-    Keyboard.set_key5(0);
-  }
+  Keyboard.set_key5((digitalRead(dataPin))?0:KEY_L);
   pulse();
-  if(!digitalRead(dataPin)){
-    Keyboard.set_key6(KEY_R);
-  }else{
-    Keyboard.set_key6(0);
-  }
+  Keyboard.set_key6((digitalRead(dataPin))?0:KEY_R);
   pulse();
   Keyboard.set_modifier(modifiers);
   Keyboard.send_now();
