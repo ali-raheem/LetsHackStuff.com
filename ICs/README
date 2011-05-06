@@ -1,0 +1,10 @@
+ICS
+-----------------------
+
+Trying to make a tool box of ICs any hacker needs.
+
+Contents:
+-----------------------
+4017.v	Implements 4017 one hot decade counter
+dff.v	D-flipflop sync RS
+dffg.v	D-flipdlop sync RS at gate level
