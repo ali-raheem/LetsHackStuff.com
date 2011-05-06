@@ -69,13 +69,13 @@ module pong(CLOCK_50, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, SW, KEY, HEX3, HEX2, 
 		end else bounceY <= 0;
 	reg [3:0] score, score1;
 	always@(posedge clk5)
-		if(ballX < 25 && ~bounceX && ballY>paddleY && ballY<paddleY+50) begin
+		if(ballX < 25 && ~bounceX && ballY+13>paddleY && ballY<paddleY+50) begin
 			v[0] <= 0;
 			bounceX <= 1;
-		end else if(ballX > 615 && ~bounceX && ballY>paddleY1 && ballY<paddleY1+50) begin
+		end else if(ballX > 615 && ~bounceX && ballY+13>paddleY1 && ballY<paddleY1+50) begin
 			v[0] <= 1;
 			bounceX <= 1;
-		end else if(ballX > 625 && ~bounceX) begin
+		end else if(ballX > 630 && ~bounceX) begin
 			v[0] <= 1;
 			bounceX <= 1;
 			miss <= 1;
