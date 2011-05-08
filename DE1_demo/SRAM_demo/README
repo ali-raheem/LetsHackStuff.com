@@ -8,3 +8,5 @@ SW[8:0] are address
 KEY[3:0] are data
 
 It degrades without power.
+
+The IC is IS61LV25616 256K x 16 HIGH SPEED ASYNCHRONOUS CMOS STATIC RAM WITH 3.3V SUPPLY according to the datasheet supplied by the altera kit. It has great timing diagrams pretty standard SRAM.
