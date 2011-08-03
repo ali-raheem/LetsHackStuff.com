@@ -1,0 +1,23 @@
+|vga
+clk => y[0].CLK
+clk => y[1].CLK
+clk => y[2].CLK
+clk => y[3].CLK
+clk => y[4].CLK
+clk => y[5].CLK
+clk => y[6].CLK
+clk => y[7].CLK
+clk => y[8].CLK
+clk => y[9].CLK
+clk => x[0].CLK
+clk => x[1].CLK
+clk => x[2].CLK
+clk => x[3].CLK
+clk => x[4].CLK
+clk => x[5].CLK
+clk => x[6].CLK
+clk => x[7].CLK
+clk => x[8].CLK
+clk => x[9].CLK
+
+

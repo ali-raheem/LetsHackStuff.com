@@ -12,15 +12,15 @@ wire line, frame;
 assign line = (x==799);
 assign frame = (y==524);
 always@(posedge clk)
-	if(line)
-		x <= 0;
-	else
-		x <= x + 1;
+vga_demo.v if(line)
+vga_demo.v vga_demo.v x <= 0;
+vga_demo.v else
+vga_demo.v vga_demo.v x <= x + 1;
 always@(posedge clk)
-	if (frame)
-		y <= 0;
-	else if (line)
-		y <= y + 1;
+vga_demo.v if (frame)
+vga_demo.v vga_demo.v y <= 0;
+vga_demo.v else if (line)
+vga_demo.v vga_demo.v y <= y + 1;
 
 assign VGA_HS = ~(x>0 && x<95);
 assign VGA_VS = ~(y==0 || y==1);
