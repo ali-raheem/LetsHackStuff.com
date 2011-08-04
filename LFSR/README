@@ -1,0 +1,7 @@
+Linear Feedback Shift Register
+------------------------------
+
+verilog LFSR is used to for various reasons such as to make sure the output
+is evenly distributed as a PRN also.
+
+http://en.wikipedia.org/wiki/Linear_feedback_shift_register
