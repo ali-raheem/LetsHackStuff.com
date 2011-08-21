@@ -1,0 +1,11 @@
+SpaceInvaders
+---------------
+
+Simple rendition for the altera DE1
+
+Only supports one invader at a time and one bullet at a time.
+Configurable background.
+KEY[1:0] Left - Right
+KEY[2] Fire
+http://www.youtube.com/watch?v=sMN_PuuQg4Y
+http://letshackstuff.com/?s=blog&m=permalink&x=simple-space-invaders-style-fpga-game
