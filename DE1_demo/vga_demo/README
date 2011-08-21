@@ -1,7 +1,0 @@
-VGA_demo
-------------------
-
-Simple demo showing use of VGA on altera DE1 use switches [8:0] to control colour.
-3 bits from the switches controls the HIGH bits of the 4bit DAC on each VGA colour channel.
-Try making the colours functions of x,y for pretty effects.
-http://letshackstuff.com/?s=blog&m=permalink&x=vga-output-from-the-de1
