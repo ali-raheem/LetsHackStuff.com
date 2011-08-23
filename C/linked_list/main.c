@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "linkedList.h"
-
+/*
+uses linkedList to create a doubly linked list.
+*/
 int main(){
 	list List = newList();
 	element Element;
