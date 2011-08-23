@@ -1,5 +1,5 @@
 CC = gcc
-OBJS = main.o element.o
+OBJS = main.o linkedList.o
 
 list: $(OBJS)
 	$(CC) -o list $(OBJS)

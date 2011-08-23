@@ -1,5 +1,5 @@
-#ifndef ELEMENT_H
-#define ELEMENT_H
+#ifndef LINKEDLIST_H
+#define LINKEDLIST_H
 
 typedef struct _element *element;
 struct _element{

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "element.h"
+#include "linkedList.h"
 
 element addElement(list List){
 	element newElement = (element) malloc(sizeof(element));
