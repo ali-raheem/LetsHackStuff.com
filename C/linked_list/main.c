@@ -28,11 +28,11 @@ int main(){
 	printList(List);
 	printf("Create a second list\n");
 	list List2 = newList();
-	Element = addElement(List);
+	Element = addElement(List2);
 	editElement(Element,32);
-	Element = addElement(List);
+	Element = addElement(List2);
 	editElement(Element,3);
-	Element = addElement(List);
+	Element = addElement(List2);
 	editElement(Element,2);
 	printList(List2);
 }
