@@ -12,9 +12,9 @@ reg [3:0] Data;
 
 always@(negedge iClk) begin
 	if(iClr)
-		Data = 4'b0000;
+		Data <= 4'b0000;
 	else if(iLDSH)
-		Data = iData;
+		Data <= iData;
 	else begin
 		Data <= Data<<1;
 		Data[0] <= iSER;
