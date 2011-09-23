@@ -20,7 +20,7 @@ always@(negedge iClk) begin
 		Data[0] <= iSER;
 	end
 end
-assign oData = iOC? 4'bxxxx : Data;
+assign oData = iOC? 4'bzzzz : Data;
 assign oCarry = Data[3];
 endmodule
 
