@@ -1,0 +1,234 @@
+|pong
+CLOCK_50 => bounceY.CLK
+CLOCK_50 => v[1].CLK
+CLOCK_50 => clk.CLK
+SW[0] => VGA_B.IN1
+SW[1] => VGA_B.IN1
+SW[2] => VGA_B.IN1
+SW[3] => VGA_G.IN1
+SW[4] => VGA_G.IN1
+SW[5] => VGA_G.IN1
+SW[6] => VGA_R.IN1
+SW[7] => VGA_R.IN1
+SW[8] => VGA_R.IN1
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballX.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+SW[9] => ballY.OUTPUTSELECT
+KEY[0] => always3.IN1
+KEY[1] => always3.IN1
+KEY[2] => always2.IN1
+KEY[3] => always2.IN1
+
+
+|pong|vga_sync:comb_116
+iclk => y[0].CLK
+iclk => y[1].CLK
+iclk => y[2].CLK
+iclk => y[3].CLK
+iclk => y[4].CLK
+iclk => y[5].CLK
+iclk => y[6].CLK
+iclk => y[7].CLK
+iclk => y[8].CLK
+iclk => y[9].CLK
+iclk => x[0].CLK
+iclk => x[1].CLK
+iclk => x[2].CLK
+iclk => x[3].CLK
+iclk => x[4].CLK
+iclk => x[5].CLK
+iclk => x[6].CLK
+iclk => x[7].CLK
+iclk => x[8].CLK
+iclk => x[9].CLK
+
+
+|pong|bcd:comb_605
+in[0] => w0[3].IN1
+in[1] => w0[4].IN1
+in[2] => w0[5].IN1
+in[3] => w0[6].IN1
+in[4] => w0[7].IN1
+
+
+|pong|bcd:comb_605|add3:comb_16
+in[0] => out[0].DATAIN
+in[1] => out[1].DATAIN
+in[2] => out[2].DATAIN
+in[3] => out[3].DATAIN
+in[4] => out[4].DATAIN
+in[5] => LessThan1.IN8
+in[5] => Add1.IN8
+in[5] => out.DATAA
+in[6] => LessThan1.IN7
+in[6] => Add1.IN7
+in[6] => out.DATAA
+in[7] => LessThan1.IN6
+in[7] => Add1.IN6
+in[7] => out.DATAA
+in[8] => LessThan1.IN5
+in[8] => Add1.IN5
+in[8] => out.DATAA
+in[9] => LessThan0.IN8
+in[9] => Add0.IN8
+in[9] => out.DATAA
+in[10] => LessThan0.IN7
+in[10] => Add0.IN7
+in[10] => out.DATAA
+in[11] => LessThan0.IN6
+in[11] => Add0.IN6
+in[11] => out.DATAA
+in[12] => LessThan0.IN5
+in[12] => Add0.IN5
+in[12] => out.DATAA
+
+
+|pong|bcd:comb_605|add3:comb_17
+in[0] => out[0].DATAIN
+in[1] => out[1].DATAIN
+in[2] => out[2].DATAIN
+in[3] => out[3].DATAIN
+in[4] => out[4].DATAIN
+in[5] => LessThan1.IN8
+in[5] => Add1.IN8
+in[5] => out.DATAA
+in[6] => LessThan1.IN7
+in[6] => Add1.IN7
+in[6] => out.DATAA
+in[7] => LessThan1.IN6
+in[7] => Add1.IN6
+in[7] => out.DATAA
+in[8] => LessThan1.IN5
+in[8] => Add1.IN5
+in[8] => out.DATAA
+in[9] => LessThan0.IN8
+in[9] => Add0.IN8
+in[9] => out.DATAA
+in[10] => LessThan0.IN7
+in[10] => Add0.IN7
+in[10] => out.DATAA
+in[11] => LessThan0.IN6
+in[11] => Add0.IN6
+in[11] => out.DATAA
+in[12] => LessThan0.IN5
+in[12] => Add0.IN5
+in[12] => out.DATAA
+
+
+|pong|bcd:comb_606
+in[0] => w0[3].IN1
+in[1] => w0[4].IN1
+in[2] => w0[5].IN1
+in[3] => w0[6].IN1
+in[4] => w0[7].IN1
+
+
+|pong|bcd:comb_606|add3:comb_16
+in[0] => out[0].DATAIN
+in[1] => out[1].DATAIN
+in[2] => out[2].DATAIN
+in[3] => out[3].DATAIN
+in[4] => out[4].DATAIN
+in[5] => LessThan1.IN8
+in[5] => Add1.IN8
+in[5] => out.DATAA
+in[6] => LessThan1.IN7
+in[6] => Add1.IN7
+in[6] => out.DATAA
+in[7] => LessThan1.IN6
+in[7] => Add1.IN6
+in[7] => out.DATAA
+in[8] => LessThan1.IN5
+in[8] => Add1.IN5
+in[8] => out.DATAA
+in[9] => LessThan0.IN8
+in[9] => Add0.IN8
+in[9] => out.DATAA
+in[10] => LessThan0.IN7
+in[10] => Add0.IN7
+in[10] => out.DATAA
+in[11] => LessThan0.IN6
+in[11] => Add0.IN6
+in[11] => out.DATAA
+in[12] => LessThan0.IN5
+in[12] => Add0.IN5
+in[12] => out.DATAA
+
+
+|pong|bcd:comb_606|add3:comb_17
+in[0] => out[0].DATAIN
+in[1] => out[1].DATAIN
+in[2] => out[2].DATAIN
+in[3] => out[3].DATAIN
+in[4] => out[4].DATAIN
+in[5] => LessThan1.IN8
+in[5] => Add1.IN8
+in[5] => out.DATAA
+in[6] => LessThan1.IN7
+in[6] => Add1.IN7
+in[6] => out.DATAA
+in[7] => LessThan1.IN6
+in[7] => Add1.IN6
+in[7] => out.DATAA
+in[8] => LessThan1.IN5
+in[8] => Add1.IN5
+in[8] => out.DATAA
+in[9] => LessThan0.IN8
+in[9] => Add0.IN8
+in[9] => out.DATAA
+in[10] => LessThan0.IN7
+in[10] => Add0.IN7
+in[10] => out.DATAA
+in[11] => LessThan0.IN6
+in[11] => Add0.IN6
+in[11] => out.DATAA
+in[12] => LessThan0.IN5
+in[12] => Add0.IN5
+in[12] => out.DATAA
+
+
+|pong|b2seg:comb_607
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|pong|b2seg:comb_608
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|pong|b2seg:comb_609
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+
+|pong|b2seg:comb_610
+in[0] => Decoder0.IN3
+in[1] => Decoder0.IN2
+in[2] => Decoder0.IN1
+in[3] => Decoder0.IN0
+
+

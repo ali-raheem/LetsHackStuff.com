@@ -23,7 +23,9 @@ module pong(CLOCK_50, VGA_R, VGA_G, VGA_B, VGA_HS, VGA_VS, SW, KEY, HEX3, HEX2, 
 //The ball it's actually a square 10:13 cause ratio is funny	
 	wire [3:0] ball;
 	reg [9:0] ballX, ballY;
-	assign ball = ((x>ballX) && (x<ballX+10) && (y>ballY) && (y<ballY+13))?4'b1111:4'b0;
+//	assign ball = ((x>ballX) && (x<ballX+10) && (y>ballY) && (y<ballY+13))?4'b1111:4'b0;
+	assign ball = ((x-ballX)**2 + (y-ballY)**2 < 36)?4'b1111:4'b0;
+
 //Player one paddle
 	wire [3:0] paddle;
 	reg [9:0] paddleY;
