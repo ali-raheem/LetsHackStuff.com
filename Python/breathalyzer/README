@@ -1,0 +1,8 @@
+Usage:
+./breathlyser SERIALPORT BAUD
+
+f - toggle fullscreen
+s - save screenie
+q - quit
+
+Edit the w and h for the window size mines 1920x1080
