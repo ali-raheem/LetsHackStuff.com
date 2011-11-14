@@ -2,17 +2,18 @@
 import pygame,serial,sys
 from time import gmtime, strftime
 #heat map generation
-def R(x,mi,255):
+mo = 255
+def R(x,mi,mo):
         if(x>mi/2):
                 return mo*(2*x/mi-1)
         return 0
 
-def G(x,mi,255):
+def G(x,mi,mo):
         if(x<mi/2):
                 return 2*mo*x/mi
         return 2*mo*(1-x/mi)
 
-def B(x,mi,255):
+def B(x,mi,mo):
         if(x<mi/2):
                 return mo*(1-2*x/mi)
         return 0
