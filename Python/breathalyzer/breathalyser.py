@@ -8,6 +8,7 @@ s = serial.Serial(sys.argv[1], sys.argv[2])
 w = 1920
 h = 1080
 highscore_wav = 'woohoo.wav'
+highscore = 0 #to prevent homer screaming atthe start
 colour = {}
 colour['HIGH'] = (255,0,0)
 colour['MEDIUM'] = (0,255,0)
@@ -16,8 +17,8 @@ black = (0,0,0)
 white = (255,255,255)
 x=0
 y=0
-highscore = 0
 quit = False
+mute = False
 
 #pygame objects
 screen = pygame.display.set_mode((w, h))
@@ -28,7 +29,7 @@ fontLarge = pygame.font.Font(None, 40)
 pygame.display.set_caption("Breathalyzer")
 pygame.mouse.set_visible(False)
 clock = pygame.time.Clock()
-highscoreSound = pygame.mixer.Sound('woohoo.wav')
+highscoreSound = pygame.mixer.Sound(highscore_wav)
 while not quit:
 	x += 1
 	if(x>=w):
@@ -47,7 +48,8 @@ while not quit:
 	except:
 		print "Error!"
 	if(y>highscore):
-		highscoreSound.play()
+		if mute:
+			 highscoreSound.play()
 		highscore = y
 		print "NEW HIGHSCORE!"
 		
@@ -64,6 +66,8 @@ while not quit:
 				print "Screenshot saved to",image_file
 			if event.key == pygame.K_q:
 				quit = True
+			if event.key == pygame.K_m:
+				mute = not mute
 	textHS = fontSmall.render("Highscore: "+str(highscore),1,white,black)
 	screen.blit(textHS,(0,0))
 	textScore = fontLarge.render(str(y),1,white,black)
