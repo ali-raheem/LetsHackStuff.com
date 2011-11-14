@@ -1,18 +1,31 @@
 #!/usr/bin/env python
 import pygame,serial,sys
 from time import gmtime, strftime
+#heat map generation
+def R(x,mi,255):
+        if(x>mi/2):
+                return mo*(2*x/mi-1)
+        return 0
+
+def G(x,mi,255):
+        if(x<mi/2):
+                return 2*mo*x/mi
+        return 2*mo*(1-x/mi)
+
+def B(x,mi,255):
+        if(x<mi/2):
+                return mo*(1-2*x/mi)
+        return 0
+
 #set up the serial port
 s = serial.Serial(sys.argv[1], sys.argv[2])
 
 #some variables
 w = 1920
 h = 1080
+mo = 500 # max input
 highscore_wav = 'woohoo.wav'
 highscore = 0 #to prevent homer screaming atthe start
-colour = {}
-colour['HIGH'] = (255,0,0)
-colour['MEDIUM'] = (0,255,0)
-colour['LOW'] = (0,0,255)
 black = (0,0,0)
 white = (255,255,255)
 x=0
@@ -38,13 +51,7 @@ while not quit:
 		pygame.draw.line(screen, white,(0,h-highscore),(w,h-highscore))
 	try:	
 		y  = int(s.readline())
-		if(y>200):
-			RGB = colour['HIGH']
-		elif(y>100):
-			RGB = colour['MEDIUM']
-		else:
-			RGB = colour['LOW']
-		screen.set_at((x,h-y), RGB)
+		screen.set_at((x,h-y), (R(y,mi,mo),G(y,mi,mo),B(y,mi,mo)))
 	except:
 		print "Error!"
 	if(y>highscore):

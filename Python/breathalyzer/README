@@ -1,6 +1,7 @@
 Usage:
 ./breathlyser SERIALPORT BAUD
 
+m - toggle mute
 f - toggle fullscreen
 s - save screenie
 q - quit
