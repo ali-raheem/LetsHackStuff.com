@@ -22,9 +22,9 @@ def B(x,mi,mo):
 s = serial.Serial(sys.argv[1], sys.argv[2])
 
 #some variables
-w = 1920
-h = 1080
-mo = 500 # max input
+w = 1280
+h = 720
+mi = 500 # max input
 highscore_wav = 'woohoo.wav'
 highscore = 0 #to prevent homer screaming atthe start
 black = (0,0,0)
@@ -56,7 +56,7 @@ while not quit:
 	except:
 		print "Error!"
 	if(y>highscore):
-		if mute:
+		if not mute:
 			 highscoreSound.play()
 		highscore = y
 		print "NEW HIGHSCORE!"
@@ -84,6 +84,7 @@ while not quit:
 
 	pygame.display.flip()
 	clock.tick(240)
+
 print "Highscore was", highscore
 s.close()
 pygame.quit()
