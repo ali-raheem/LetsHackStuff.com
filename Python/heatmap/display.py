@@ -32,7 +32,7 @@ def B(x,mi,mo):
 
 while not quit:
 	for x in range(0,400):
-		screen.set_at((y,h-x), (R(y,mi,mo),G(y,mi,mo),B(y,mi,mo)))
+		screen.set_at((y,x), (R(y,mi,mo),G(y,mi,mo),B(y,mi,mo)))
 	y += 1
 	pygame.display.flip()
 	clock.tick(240)
