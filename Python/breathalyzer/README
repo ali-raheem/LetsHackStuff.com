@@ -7,3 +7,6 @@ s - save screenie
 q - quit
 
 Edit the w and h for the window size mines 1920x1080
+
+The white line is the highscore ass of the last page refresh. In the centre top is the current score, left top is high score.
+A heatmap is used to colour the line.
