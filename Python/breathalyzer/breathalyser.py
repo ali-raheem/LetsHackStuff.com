@@ -54,12 +54,12 @@ while not quit:
 		y  = int(s.readline())
 		screen.set_at((x,h-y), (R(y,mi,mo),G(y,mi,mo),B(y,mi,mo)))
 	except:
-		print "Error!"
+		print "#Couldn't get sane value from Serial port!"
 	if(y>highscore):
 		if not mute:
 			 highscoreSound.play()
 		highscore = y
-		print "NEW HIGHSCORE!"
+		print "#NEW HIGHSCORE!"
 		
 	print x,y
 	for event in pygame.event.get():
@@ -85,6 +85,6 @@ while not quit:
 	pygame.display.flip()
 	clock.tick(240)
 
-print "Highscore was", highscore
+print "#Highscore was", highscore
 s.close()
 pygame.quit()
