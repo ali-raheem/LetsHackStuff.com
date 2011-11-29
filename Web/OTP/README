@@ -1,0 +1,24 @@
+OTP
+---
+
+Basic system for implementing a one time password login.
+
+How it works
+------------
+
+Server stores username and h(username.password) where h() is a one-way 
+hash function, this is the HASH. On login the server sends a challenge, 
+in this case the first 10 bytes of md5(mt_rand()). The reply is 
+g(HASH.challenge).
+
+In this implementation h() and g() are sha512 and of the reply only the 
+first 10 chars are used.
+
+Files
+-----
+client.py - simple response generator.
+index.php - starts login
+login.php - checks login
+image.php - generates challenge captcha
+logout.php - logs out
+README - this file
