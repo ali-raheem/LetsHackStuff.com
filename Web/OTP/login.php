@@ -11,12 +11,12 @@ $challenge = $_SESSION['challenge'];
 $resp = substr(hash('sha512', $hash.$challenge),0,10);
 if($otp == $resp){
 	echo "You're in!";
+	$_SESSION['username'] = $username;
 }else{
 	echo "Fail!";
 }
 
 unset($_SESSION['code']);
-$_SESSION['username'] = $username;
 mysql_close()
 ?>
 
