@@ -21,4 +21,5 @@ index.php - starts login
 login.php - checks login
 image.php - generates challenge captcha
 logout.php - logs out
+mysql_secure_db.sql - mysql dump of the secure_db
 README - this file
