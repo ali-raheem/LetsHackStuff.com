@@ -8,19 +8,19 @@
 <body>
 <?PHP
 if(isset($_POST['username']) && isset($_POST['password'])){
+require_once('mysql.php');
 $username = mysql_real_escape_string($_POST['username']);
 $password = $_POST['password'];
 $hash = hash( 'sha512', $username.$password);
 $query = "INSERT INTO users VALUES (NULL, '$username', '$hash');";
-require_once('mysql.php');
-$result = mysql_query($query);
+mysql_query($query) or die(mysql_error());
 mysql_close();
 ?>
-<p>Added <?$username?> to the databse. <a href='index.php'>Login Here!</a></p>
+<p>Added to '<?$username?>' the databse. <a href='index.php'>Login Here!</a></p>
 <?PHP
 }else{
 ?>
-<form action='#' method='POST'>
+<form action='' method='POST'>
 <table>
 <tr><td>Username:</td><td><input type='text' name='username'/></td></tr>
 <tr><td>Password:</td><td><input type='text' name='password'/></td></tr>
